@@ -12,11 +12,14 @@ document.addEventListener("click", () => {
 })
 
 sendBtnForm.addEventListener("click", (Event) => {
+    let emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     Event.preventDefault();
 
     if(!nameForm.value || !emailForm.value || !messageForm.value) { //Si un des champs est vide
         errorMessage.innerHTML = "Veuillez remplir tout les champs"
-    } else {
+    } else if(!emailFormat.test(emailForm.value)) {
+        errorMessage.innerHTML = "Veuillez rentrez une adresse mail valide"
+    }else {
         errorMessage.innerHTML = null;
     }
 })
