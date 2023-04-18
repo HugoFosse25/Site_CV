@@ -22,8 +22,8 @@ body {
 #main-title {
   font-size: 2em;
   text-align: center;
-  padding-top: 75px;
-  margin-bottom: 1em;
+  color: #13778B;
+  
 }
   
   /* Styles pour la barre de navigation */
@@ -156,4 +156,12 @@ footer p {
 textarea {
   resize: none;
 }
-  
+
+.top {
+  padding-bottom: 76px;
+  width: 100%;
+  padding-top: 76px;
+  background-image: url('./images/back.jpg');
+  background-size: cover;
+  background-position: center;
+}
