@@ -24,7 +24,7 @@ sendBtnForm.addEventListener("click", (Event) => {
         errorMessage.innerHTML = null;
 
         const xhr = new XMLHttpRequest();
-        const url = '../server/server.php'
+        const url = './serv/server.php'
         const params = `name=${nameForm.value}&email=${emailForm.value}&message=${messageForm.value}`;
 
         xhr.open('POST', url);
