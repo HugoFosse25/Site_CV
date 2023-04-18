@@ -152,4 +152,8 @@ footer {
   .footer-link:hover {
     background-color: #709CA7;
   }
+
+  textarea {
+    resize: none;
+  }
   

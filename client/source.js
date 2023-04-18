@@ -20,6 +20,20 @@ sendBtnForm.addEventListener("click", (Event) => {
     } else if(!emailFormat.test(emailForm.value)) {
         errorMessage.innerHTML = "Veuillez rentrez une adresse mail valide"
     }else { //Formulaire OK
+
         errorMessage.innerHTML = null;
+
+        const xhr = new XMLHttpRequest();
+        const url = '../server/server.php'
+        const params = `name=${nameForm.value}&email=${emailForm.value}&message=${messageForm.value}`;
+
+        xhr.open('POST', url);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+            console.log(xhr.responseText); // Affiche la réponse du script PHP
+            }
+        };
+        xhr.send(params);
     }
 })
