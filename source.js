@@ -32,6 +32,10 @@ sendBtnForm.addEventListener("click", (Event) => {
         xhr.onload = function() {
             if (xhr.status === 200) {
             console.log(xhr.responseText); // Affiche la réponse du script PHP
+
+            nameForm.value=null;
+            emailForm.value=null;
+            messageForm.value=null;
             }
         };
         xhr.send(params);
