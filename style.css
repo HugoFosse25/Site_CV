@@ -14,6 +14,8 @@ html{
 body {
     background-color: #ffffff;
     color: #344D59;
+    position: relative;
+    min-height: 100%;
   }
   
   /* Styles pour le titre principal */
@@ -73,7 +75,9 @@ body {
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 1em;
+    text-align: left;
   }
+  
   
   .content h2 {
     margin-top: 2em;
@@ -119,9 +123,33 @@ body {
   input[type="submit"]:hover {
     background-color: #709CA7;
   }
-
-  #error-message p {
-    color: red;
-    text-align: left;
+  
+  /* Styles pour le footer */
+footer {
+    position: fixed;
+    background-color: #344D59;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin-bottom: 0.5em;
+  }
+  
+  .footer-link {
+    color: #B8CBD0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .footer-link:hover {
+    background-color: #709CA7;
   }
   
