@@ -119,4 +119,9 @@ body {
   input[type="submit"]:hover {
     background-color: #709CA7;
   }
+
+  #error-message p {
+    color: red;
+    text-align: left;
+  }
   
