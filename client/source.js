@@ -19,7 +19,7 @@ sendBtnForm.addEventListener("click", (Event) => {
         errorMessage.innerHTML = "Veuillez remplir tout les champs"
     } else if(!emailFormat.test(emailForm.value)) {
         errorMessage.innerHTML = "Veuillez rentrez une adresse mail valide"
-    }else {
+    }else { //Formulaire OK
         errorMessage.innerHTML = null;
     }
 })
