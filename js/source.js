@@ -1,5 +1,6 @@
 const nameForm = document.getElementById("name-form");
 const emailForm = document.getElementById("email-form");
+const subjectForm = document.getElementById("subject-form");
 const messageForm = document.getElementById("message-form");
 const errorMessage = document.getElementById("error-message");
 
@@ -15,7 +16,7 @@ sendBtnForm.addEventListener("click", (Event) => {
     let emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     Event.preventDefault();
 
-    if(!nameForm.value || !emailForm.value || !messageForm.value) { //Si un des champs est vide
+    if(!nameForm.value || !emailForm.value || !messageForm.value || !subjectForm.value) { //Si un des champs est vide
         errorMessage.innerHTML = "Veuillez remplir tout les champs"
     } else if(!emailFormat.test(emailForm.value)) {
         errorMessage.innerHTML = "Veuillez rentrez une adresse mail valide"
@@ -24,8 +25,8 @@ sendBtnForm.addEventListener("click", (Event) => {
         errorMessage.innerHTML = null;
 
         const xhr = new XMLHttpRequest();
-        const url = './serv/server.php'
-        const params = `name=${nameForm.value}&email=${emailForm.value}&message=${messageForm.value}`;
+        const url = './serv/postmessage.php'
+        const params = `&name=${nameForm.value}&email=${emailForm.value}&message=${messageForm.value}&subject=${subjectForm.value}`;
 
         xhr.open('POST', url);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -36,6 +37,7 @@ sendBtnForm.addEventListener("click", (Event) => {
             nameForm.value=null;
             emailForm.value=null;
             messageForm.value=null;
+            subjectForm.value=null;
             }
         };
         xhr.send(params);
