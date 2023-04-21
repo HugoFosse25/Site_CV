@@ -7,65 +7,54 @@
     <title>Hugo Fossé - Accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/source.js" defer></script>
     <script src="js/style.js" defer></script>
 </head>
 <body>
-    <div class="banner">
-        <img src="./images/bus_motherboard.jpg" alt="image1" class="active">
-        <img src="./images/chip_motherboard.jpg" alt="image2">
-        <img src="./images/neon-string.jpg" alt="image3">
-        <img src="./images/neon_hexagon.jpg" alt="image4">
-        <div class="background-shadow"></div>
-        <nav class="banner-nav">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="./files/CV.pdf" target="_blank">CV</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#form-anchor">Contact</a></li>
-              </ul>
-        </nav>
-    </div>
+    <header>
+        <div class="banner">
+            <img src="./images/bus_motherboard.jpg" alt="image1" class="active">
+            <img src="./images/chip_motherboard.jpg" alt="image2">
+            <img src="./images/neon-string.jpg" alt="image3">
+            <img src="./images/neon_hexagon.jpg" alt="image4">
+            <div class="background-shadow"></div>
+            <nav class="banner-nav">
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./files/CV.pdf" target="_blank">CV</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+            </nav>
+        </div>
+    </header>
     <main>
-        <div class="block">
-          <section class="text">
-            <h2>Bienvenue sur mon site !</h2>
-            <br><br>
-            <p>Je m'appelle Hugo Fossé et je suis technicien informatique et, je suis passionné par les technologies. Sur ce site, vous pourrez découvrir mon CV et en apprendre davantage sur moi et mes compétences en matière de support technique, de résolution de problèmes informatiques et de maintenance de systèmes. Je suis convaincu que mes compétences techniques, mes connaissances et mon engagement envers l'excellence en matière de service à la clientèle peuvent apporter une réelle valeur ajoutée à votre entreprise. N'hésitez pas à parcourir mon site et à me contacter pour toute demande d'informations complémentaires ou pour discuter de vos besoins en matière de support informatique.</p>
-          </section>
-          <div class="img-block"></div>
+        <div class="index-grid">
+            <div class="index-grid-container">
+                <div class="presentation-container">
+                    <h2>Présentation</h2>
+                    <p>
+                        Je m'appelle Hugo Fossé, et je suis technicien informatique.
+                        En plus de mon travail, je suis passionné par la production musicale
+                        avec le logiciel FL Studio. J'aime également travailler sur des projets
+                        de création de sites web et de programmes informatiques, principalement en C#
+                        et C++. Sur mon temps libre, je déploie et maintient plusieurs serveurs informatiques
+                        comme des serveurs web, de jeux et de stockage. Mon objectif est de continuer à développer 
+                        mes compétences et d'explorer de nouvelles technologies pour être à la pointe dans mon domaine.
+                    </p>
+                    <p>
+                        Sur mon site, vous pourrez retrouver mon CV détaillé ainsi que des informations complémentaires
+                        sur moi, mes compétences et mes passions. Vous pourrez également me contacter facilement grâce 
+                        à un espace dédié à cet effet sur mon site. N'hésitez pas à explorer mon site pour en savoir plus !
+                    </p>
+                </div>
+                <div class="index-image-container"></div>
+            </div>
         </div>
-        <form id="form-anchor">
-            <h2>Contactez-moi !</h2>
-            <div class="group-input">
-                <label for="nom">Nom :</label>
-                <input type="text" id="name-form" name="nom" required>
-            </div>
-            <div class="group-input">
-                <label for="email">Email :</label>
-                <input type="email" id="email-form" name="email" required>
-            </div>
-            <div class="group-input">
-                <label for="sujet">Sujet :</label>
-                <input type="text" id="subject-form" name="sujet" required>
-            </div>
-            <div class="group-input">
-                <label for="message">Message :</label>
-                <textarea rows="5" id="message-form" name="message-form" required></textarea>
-            </div>
-            <button type="submit" id="btn-form">Envoyer</button>
-            <p id="error-message"></p>
-        </form>
     </main>
-
     <footer>
-        <div class="container">
-          <p>Copyright @2023</p>
-        </div>
+        <p>Copyright @2023</p>
     </footer>
-      
-
 </body>
 </html>

@@ -1,19 +1,15 @@
 /* Styles pour le corps de la page */
 
 * {
-  margin: 0px;
-  padding: 0px;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  font-family: 'Chivo Mono', monospace;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  min-height: 100%;
+  background: whitesmoke;
+  min-height: 900px;
+  font-family: 'Anuphan', sans-serif;
+  width: 100%;
 }
 
 /* Styles bannière */
@@ -21,7 +17,8 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 150px;
+  max-height: 200px;
 }
 
 
@@ -65,34 +62,24 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: calc(18% + 1px);
+  height: calc(45% + 1px);
   background-color: rgba(0, 0, 0, 0.103);
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* alignement vertical au centre */
-  box-sizing: border-box;
 }
 
 .banner-nav ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .banner-nav li {
-  flex-grow: 1;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  width: 100%;
   display: block;
   list-style:none;
-  align-items: center; /* Ajout de cette ligne */
+  justify-content: space-between;
 }
 
 .banner-nav li:hover {
@@ -101,15 +88,14 @@ body {
 }
 
 .banner-nav a {
-  margin-top: 27px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   text-decoration: none;
   border: none;
-  text-align: center;
-  line-height: 100%;
   color: rgb(214, 214, 214);
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .banner-nav a:hover {
@@ -117,115 +103,206 @@ body {
   color: rgb(233, 233, 233);
 }
 
-/* Styles main */
+/* Style Contenu Principal index.html */
 
 main {
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
-
-.block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 70px;
+  min-height: 600px;
   width: 100%;
-  height:70%;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 }
 
-.text {
-  width: 60%;
-  padding: 50px;
+main .index-grid-container {
+  min-height: 550px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+main .index-grid-container .presentation-container {
+  margin-left: 35px;
+  padding-right: 35px;
+}
+
+main .index-grid-container .presentation-container h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+main .index-grid-container .presentation-container p {
   text-align: justify;
-  text-justify: inter-word;
+  text-justify:auto;
+  hyphens: auto;
+  font-size: 1.15rem;
+  margin-top: 20px;
 }
 
-.text p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #333;
+main .index-image-container {
+  background: rgb(0, 0, 0);
+  margin-right: 35px;
+  border-radius: 10px;
+  min-height: 300px;
+  max-height: 550px;
 }
 
-.img-block {
-  width: 40%;
-  height: 100%;
-  background-color: #696969;
-}
+/* Style Formulaire contact.html */
 
 form {
-  max-width: 500px;
-  margin: 50px auto 0;
-  background-color: #fff;
+  max-width: 630px;
+
+  display: grid;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 30px 0;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 38% 20%;
+  grid-template-areas: 
+  "i1 i2"
+  "i3 i3"
+  "ta ta"
+  "bt bt";
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 35px;
+  font-family: 'Anuphan', sans-serif;
   padding: 20px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
 }
 
-h2 {
-  text-align: center;
-  color: #000;
+input {
+  height: 30px;
 }
 
-.group-input {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #000;
-}
-
-input[type="text"],
-input[type="email"],
 textarea {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-  color: #000;
+  height: 190px;
+  grid-area: ta;
+  resize: none;
 }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border: 2px solid #000;
-}
-
-button[type="submit"] {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #333;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: #ffffff00;
-  color: #000000;
-  padding: 20px;
+#contact-title {
   text-align: center;
 }
 
-#error-message {
+#subject-form {
+  grid-area: i3;
+}
+
+#btn-form {
+  width: 130px;
+  grid-area: bt;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 0;
+  background: black;
+  color: white;
+}
+
+#btn-form:hover {
+  background: rgba(0, 0, 0, 0.792);
+}
+
+#submit-message {
   color: red;
 }
 
-textarea {
-  resize: none;
+/* Style Footer */
+
+footer {
+  margin-top: 50px;
+  min-height: 2rem;
+  max-height: 100px;
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f3f3f3;
 }
+
+footer p {
+  bottom: 0;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width : 1300px) {
+  main .index-grid-container {
+    display: grid;
+    grid-template-columns: 95%;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+  }
+
+  main .index-grid-container .presentation-container {
+    padding: 0;
+    margin: 0 2.5%;
+  }
+
+  main .index-image-container {
+    background-color: black;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+  }
+
+  main .index-grid-container .presentation-container h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  main .index-grid-container .presentation-container p {
+    text-align: justify;
+    text-justify:auto;
+    hyphens: auto;
+    font-size: 1.15rem;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width : 210px) {
+  main .index-grid-container .presentation-container h2 {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width : 450px) {
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    max-height: 110px;
+  }
+  #contact-main {
+    margin-top: 10px;
+  }
+
+  .banner-nav a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width : 640px) {
+  form {
+    grid-template-columns: 95%;
+    grid-template-areas: 
+    "i1"
+    "i2"
+    "i3"
+    "ta"
+    "bt";
+    margin-top: 10px;
+  }
+
+  input, textarea {
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 35px;
+    font-family: 'Anuphan', sans-serif;
+    padding: 20px;
+    width: 60%;
+  }
+}
+
